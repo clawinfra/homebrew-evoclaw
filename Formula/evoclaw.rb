@@ -4,16 +4,16 @@
 class Evoclaw < Formula
   desc "Self-evolving AI agent framework"
   homepage "https://github.com/clawinfra/evoclaw"
-  version "0.4.0"
+  version "0.5.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/clawinfra/evoclaw/releases/download/v0.4.0/evoclaw-darwin-arm64.tar.gz"
-      sha256 "e0290d1faf35d632aec47a7db837a2fa680822fa43977f5dd0350e3e93dc7d20"
+      url "https://github.com/clawinfra/evoclaw/releases/download/v0.5.0/evoclaw-darwin-arm64.tar.gz"
+      sha256 "8d81fbe4d77f3af9accae88d96f6f26f79444d16005648230b7f3ea0865a8d10"
     else
-      url "https://github.com/clawinfra/evoclaw/releases/download/v0.4.0/evoclaw-darwin-amd64.tar.gz"
-      sha256 "2fa9e6745f90eca440e6a9e0c2692e2f9d6ca4a4348158b5fbc8e0659c5fd1da"
+      url "https://github.com/clawinfra/evoclaw/releases/download/v0.5.0/evoclaw-darwin-amd64.tar.gz"
+      sha256 "2cd45f47642928ecbc4e54d1d6ffb60c44e0629f26b17d8ac08505457b16e372"
     end
   end
 
