@@ -70,8 +70,9 @@ When releasing a new version:
    ```
 3. Update `Formula/evoclaw.rb`:
    - Update `version`
-   - Replace `PLACEHOLDER_AMD64_SHA256` with Intel binary SHA256
-   - Replace `PLACEHOLDER_ARM64_SHA256` with Apple Silicon binary SHA256
+   - Update both release `url` values to point at the new tag
+   - Update the `sha256` inside the `arm?` branch with the Apple Silicon binary SHA256
+   - Update the `sha256` inside the `else` branch with the Intel binary SHA256
 4. Commit and push:
    ```bash
    git add Formula/evoclaw.rb
@@ -83,8 +84,8 @@ When releasing a new version:
 ### Testing Locally
 
 ```bash
-# Audit the formula
-brew audit --new-formula evoclaw
+# Audit the formula (use --new-formula only for first-time submission)
+brew audit --strict --online evoclaw
 
 # Test installation
 brew install --build-from-source evoclaw
