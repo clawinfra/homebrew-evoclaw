@@ -7,6 +7,11 @@ class Evoclaw < Formula
   version "0.6.1"
   license "MIT"
 
+  livecheck do
+    url "https://github.com/clawinfra/evoclaw/releases/latest"
+    strategy :github_latest
+  end
+
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/clawinfra/evoclaw/releases/download/v0.6.1/evoclaw-darwin-arm64.tar.gz"
