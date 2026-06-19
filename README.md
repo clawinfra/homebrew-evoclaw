@@ -12,7 +12,7 @@ brew tap clawinfra/evoclaw
 brew install evoclaw
 
 # Verify installation
-evoclaw --version
+evoclaw version
 ```
 
 ## Usage
