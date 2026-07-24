@@ -64,8 +64,9 @@ When releasing a new version:
 1. Build and create GitHub release with binaries
 2. Download both macOS binaries and calculate SHA256:
    ```bash
-   wget https://github.com/clawinfra/evoclaw/releases/download/v1.0.0/evoclaw-darwin-amd64.tar.gz
-   wget https://github.com/clawinfra/evoclaw/releases/download/v1.0.0/evoclaw-darwin-arm64.tar.gz
+   VERSION=v1.0.0   # set this to the release tag you are publishing
+   wget https://github.com/clawinfra/evoclaw/releases/download/${VERSION}/evoclaw-darwin-amd64.tar.gz
+   wget https://github.com/clawinfra/evoclaw/releases/download/${VERSION}/evoclaw-darwin-arm64.tar.gz
    shasum -a 256 evoclaw-darwin-*.tar.gz
    ```
 3. Update `Formula/evoclaw.rb`:
